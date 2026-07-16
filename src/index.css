@@ -312,6 +312,222 @@ body {
 .diagram-node.tertiary { background: rgba(157, 78, 221, 0.15); border: 1px solid var(--accent-purple); color: #d6a1ff; }
 .diagram-arrow { color: var(--text-tertiary); }
 
+/* Structural UML diagrams */
+.structural-diagram {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  overflow: hidden;
+}
+
+.diagram-section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.diagram-section-icon {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  display: grid;
+  place-items: center;
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.24);
+  border-radius: var(--radius-md);
+}
+
+.diagram-eyebrow {
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.2rem;
+}
+
+.diagram-section-title {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.diagram-section-description {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin-top: 0.35rem;
+  max-width: 720px;
+}
+
+.diagram-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(67, 97, 238, 0.09), transparent 42%),
+    rgba(0, 0, 0, 0.22);
+  scrollbar-color: var(--accent-blue) transparent;
+}
+
+.diagram-scroll:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+.uml-canvas {
+  display: block;
+  width: 100%;
+  min-width: 720px;
+  height: auto;
+}
+
+.uml-group-box {
+  fill: rgba(13, 18, 34, 0.28);
+  stroke-width: 1;
+  stroke-dasharray: 5 6;
+}
+
+.uml-group-blue { stroke: rgba(67, 97, 238, 0.32); }
+.uml-group-cyan { stroke: rgba(0, 240, 255, 0.28); }
+.uml-group-purple { stroke: rgba(157, 78, 221, 0.25); }
+
+.uml-group-label,
+.uml-stereotype,
+.uml-class-title,
+.uml-member,
+.uml-relation-label,
+.uml-multiplicity {
+  font-family: var(--font-mono);
+}
+
+.uml-group-label {
+  fill: var(--text-tertiary);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.uml-class-bg,
+.uml-client-box {
+  fill: var(--bg-secondary);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2));
+}
+
+.uml-blue .uml-class-bg { stroke: var(--accent-blue); }
+.uml-cyan .uml-class-bg { stroke: var(--accent-cyan); }
+.uml-purple .uml-class-bg { stroke: var(--accent-purple); }
+.uml-client-box { stroke: var(--text-tertiary); stroke-dasharray: 5 4; }
+
+.uml-divider {
+  stroke: var(--border-highlight);
+  stroke-width: 1;
+}
+
+.uml-stereotype {
+  fill: var(--text-tertiary);
+  font-size: 11px;
+  font-style: italic;
+}
+
+.uml-class-title {
+  fill: var(--text-primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.uml-member {
+  fill: var(--text-secondary);
+  font-size: 11px;
+}
+
+.uml-relation {
+  fill: none;
+  stroke: var(--text-tertiary);
+  stroke-width: 1.5;
+}
+
+.uml-dashed { stroke-dasharray: 6 5; }
+.uml-association { stroke: var(--accent-cyan); }
+
+.uml-hollow-arrow {
+  fill: var(--bg-primary);
+  stroke: var(--text-tertiary);
+  stroke-width: 1.2;
+}
+
+.uml-open-arrow {
+  fill: none;
+  stroke: var(--accent-cyan);
+  stroke-width: 1.4;
+}
+
+.uml-composition-diamond {
+  fill: var(--accent-cyan);
+  stroke: var(--accent-cyan);
+}
+
+.uml-relation-label {
+  fill: var(--text-tertiary);
+  font-size: 10px;
+  font-style: italic;
+}
+
+.uml-multiplicity {
+  fill: var(--accent-cyan);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.diagram-legend {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+  margin-top: var(--space-md);
+}
+
+.diagram-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.legend-line {
+  display: inline-block;
+  width: 25px;
+  height: 0;
+  border-top: 1.5px solid currentColor;
+}
+
+.legend-line.dashed { border-top-style: dashed; }
+
+.legend-diamond {
+  width: 9px;
+  height: 9px;
+  background: var(--accent-cyan);
+  transform: rotate(45deg);
+}
+
+.legend-triangle {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 9px solid var(--text-tertiary);
+}
+
+@media (max-width: 768px) {
+  .structural-diagram { padding: var(--space-md); }
+  .diagram-section-icon { display: none; }
+  .diagram-legend { justify-content: flex-start; gap: var(--space-md); }
+  .uml-canvas { min-width: 680px; }
+}
+
 /* Code Block */
 .code-container {
   margin-top: var(--space-xl);
@@ -510,3 +726,12 @@ body {
 :root.light-theme .diagram-box {
   background: rgba(255, 255, 255, 0.5);
 }
+
+:root.light-theme .diagram-scroll {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(58, 12, 163, 0.07), transparent 42%),
+    rgba(255, 255, 255, 0.55);
+}
+
+:root.light-theme .uml-group-box { fill: rgba(255, 255, 255, 0.35); }
+:root.light-theme .uml-hollow-arrow { fill: var(--bg-primary); }

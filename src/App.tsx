@@ -4,6 +4,7 @@ import { Sidebar } from './components/Sidebar';
 import { Footer } from './components/Footer';
 import { PatternCard } from './components/PatternCard';
 import { CodeBlock } from './components/CodeBlock';
+import { StructuralDiagram } from './components/StructuralDiagram';
 
 const bridgeCode = `from abc import ABC, abstractmethod
 
@@ -87,6 +88,7 @@ function BridgePattern() {
           }
         />
         <PatternCard 
+          id="solution"
           type="solution"
           title="🛠️ La solución"
           description={
@@ -94,15 +96,10 @@ function BridgePattern() {
               El patrón Bridge separa la abstracción (Forma) de su implementación (Color). En vez de heredar todas las combinaciones, se crea un puente entre ambas jerarquías.
             </>
           }
-          diagram={
-            <div id="diagram">
-              <div className="diagram-node primary">Forma<br/><small>(Abstracción)</small></div>
-              <span className="material-symbols-outlined diagram-arrow">arrow_forward</span>
-              <div className="diagram-node secondary">Color<br/><small>(Implementación)</small></div>
-            </div>
-          }
         />
       </div>
+
+      <StructuralDiagram pattern="bridge" />
       
       <div id="cases" className="grid grid-cols-2 gap-xl mt-xl">
         <PatternCard 
@@ -158,20 +155,13 @@ function ProxyPattern() {
           description="Tienes un objeto masivo que consume recursos significativos del sistema (por ejemplo, una imagen pesada en 4K o un modelo 3D grande). Lo necesitas ocasionalmente, pero instanciarlo por adelantado degrada el tiempo de inicio de la aplicación o el uso de memoria."
         />
         <PatternCard 
+          id="solution"
           type="solution"
           title="La Solución"
           description="Crea un sustituto (Proxy) que implemente la misma interfaz que el objeto real. El Proxy controla el acceso, instanciando el objeto real solo cuando es estrictamente necesario (Carga Diferida o Lazy Loading)."
-          diagram={
-            <div id="diagram">
-              <div className="diagram-node primary" style={{borderStyle: 'dashed'}}>Cliente</div>
-              <span className="material-symbols-outlined diagram-arrow">arrow_forward</span>
-              <div className="diagram-node secondary">Proxy</div>
-              <span className="material-symbols-outlined diagram-arrow">arrow_forward</span>
-              <div className="diagram-node tertiary">SujetoReal</div>
-            </div>
-          }
         />
       </div>
+      <StructuralDiagram pattern="proxy" />
       <div id="cases"></div>
       <CodeBlock id="implementation" language="PHP" code={proxyCode} />
     </div>
