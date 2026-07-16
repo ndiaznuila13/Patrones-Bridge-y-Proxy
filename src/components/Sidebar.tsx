@@ -7,11 +7,7 @@ export function Sidebar() {
       </div>
       
       <nav className="sidebar-nav">
-        <a href="#overview" className="sidebar-link active">
-          <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>info</span>
-          Visión General
-        </a>
-        <a href="#problem" className="sidebar-link">
+        <a href="#problem" className="sidebar-link active">
           <span className="material-symbols-outlined">error_outline</span>
           El Problema
         </a>
@@ -19,17 +15,17 @@ export function Sidebar() {
           <span className="material-symbols-outlined">lightbulb</span>
           La Solución
         </a>
-        <a href="#diagram" className="sidebar-link">
-          <span className="material-symbols-outlined">schema</span>
-          Diagrama
-        </a>
-        <a href="#implementation" className="sidebar-link">
+        <a href="#code" className="sidebar-link">
           <span className="material-symbols-outlined">code</span>
-          Implementación
+          Código Mínimo
         </a>
-        <a href="#cases" className="sidebar-link">
+        <a href="#when-to-use" className="sidebar-link">
+          <span className="material-symbols-outlined">rule</span>
+          Cuándo sí y cuándo no
+        </a>
+        <a href="#real-example" className="sidebar-link">
           <span className="material-symbols-outlined">business_center</span>
-          Casos de Estudio
+          Ejemplo Real
         </a>
       </nav>
     </aside>

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
 interface HeaderProps {
-  activeTab: 'bridge' | 'proxy';
-  setActiveTab: (tab: 'bridge' | 'proxy') => void;
+  activeTab: 'home' | 'bridge' | 'proxy';
+  setActiveTab: (tab: 'home' | 'bridge' | 'proxy') => void;
 }
 
 export function Header({ activeTab, setActiveTab }: HeaderProps) {
@@ -20,7 +20,7 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
     <header className="header">
       <div className="container flex justify-between items-center">
         <div className="title-heavy" style={{ fontSize: '1.85rem' }}>
-          PatronesDeDiseño
+          Los Patrones
         </div>
         
         <nav className="flex gap-lg" style={{ display: 'none' }}>
@@ -28,6 +28,13 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
         </nav>
         
         <nav className="flex gap-lg">
+          <button 
+            className={`nav-link ${activeTab === 'home' ? 'active' : ''}`}
+            onClick={() => setActiveTab('home')}
+            style={{ background: 'transparent', border: 'none', cursor: 'pointer', fontFamily: 'inherit', padding: 0 }}
+          >
+            Inicio
+          </button>
           <button 
             className={`nav-link ${activeTab === 'bridge' ? 'active' : ''}`}
             onClick={() => setActiveTab('bridge')}
