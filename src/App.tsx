@@ -355,7 +355,7 @@ function ProxyPattern() {
         id="solution"
         type="solution"
         title="La solución"
-        description="Crea un sustituto (Proxy) que implemente la misma interfaz que el objeto real. El Proxy controla el acceso, instanciando el objeto real solo cuando es estrictamente necesario (Carga Diferida o Lazy Loading)."
+        description="La idea es simple: en vez de darle al cliente el objeto real, le das un sustituto que se ve idéntico por fuera — el Proxy. Como ambos implementan la misma interfaz, el cliente no nota la diferencia. Por dentro, el Proxy es el portero: recibe las llamadas y solo crea el objeto real en el momento exacto en que de verdad se necesita. A eso se le llama carga diferida (Lazy Loading)."
       />
       
       <StructuralDiagram pattern="proxy" />
