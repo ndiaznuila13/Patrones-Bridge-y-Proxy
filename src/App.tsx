@@ -254,8 +254,8 @@ function BridgePattern() {
         title="El problema"
         description={
           <>
-            Imagina que tienes una jerarquía de clases para formas geométricas (Círculo, Cuadrado) y otra para colores (Rojo, Azul). Si intentas combinarlas directamente, terminas con clases como CírculoRojo, CírculoAzul, CuadradoRojo, CuadradoAzul… y así sucesivamente.<br/><br/>
-            <b>El dolor:</b> la explosión de clases cuando quieres añadir nuevas formas o nuevos colores.
+            Imaginemos que tenemos una jerarquía de clases para todas las formas geométricas que existen, como el círculo o el cuadrado, y otra jerarquía aparte para los colores, como el azul y el rojo. El problema aparece cuando intentamos combinar ambas cosas directamente: terminamos con clases como CírculoRojo, CírculoAzul, CuadradoRojo, CuadradoAzul… y la lista sigue creciendo con cada forma o color nuevo que se nos ocurra agregar.<br/><br/>
+            <b>El dolor real:</b> cada vez que añadimos una forma o un color, la cantidad de clases se dispara. No estamos escalando el sistema, lo estamos multiplicando.
           </>
         }
       />
@@ -265,7 +265,7 @@ function BridgePattern() {
         title="La solución"
         description={
           <>
-            El patrón Bridge separa la abstracción (Forma) de su implementación (Color). En vez de heredar todas las combinaciones, se crea un puente entre ambas jerarquías.
+            El patrón Bridge resuelve esto separando la abstracción (Forma) de su implementación (Color). En lugar de heredar todas las combinaciones posibles, construye un puente entre ambas jerarquías para que trabajen juntas sin depender la una de la otra.
           </>
         }
       />
@@ -278,11 +278,11 @@ function BridgePattern() {
           title="Anatomía del Código"
           description={
             <>
-              El código de implementación demuestra la esencia del patrón Bridge utilizando tres componentes clave:
+              El código muestra la esencia del patrón Bridge apoyándose en tres piezas clave:
               <ul style={{ paddingLeft: '1.2rem', marginTop: '0.5rem', listStyleType: 'disc' }}>
-                <li><b>La Implementación (Color):</b> Una interfaz independiente que define las variaciones. Es esencial porque separa esta dimensión del objeto principal.</li>
-                <li><b>La Abstracción (Shape):</b> Contiene una referencia hacia la implementación (este es "el puente"). Es vital porque usa <i>composición</i> en lugar de herencia, delegando la tarea de color en lugar de definirla internamente.</li>
-                <li><b>Composición dinámica:</b> Al instanciar <code>new Circle(new Red())</code> unimos ambas piezas en tiempo de ejecución. Esto permite crear 100 formas y 100 colores sin programar 10,000 clases combinadas, solo 200.</li>
+                <li><b>La Implementación (Color):</b> una interfaz independiente que define las variaciones de color. Es clave porque aísla esta dimensión del objeto principal, sin mezclarla con la lógica de las formas.</li>
+                <li><b>La Abstracción (Shape):</b> guarda una referencia hacia la implementación — este es literalmente "el puente". Es la pieza central porque usa <i>composición</i> en lugar de herencia: en vez de definir el color dentro de cada forma, se lo delega al objeto Color.</li>
+                <li><b>Composición dinámica:</b> al escribir <code>new Circle(new Red())</code> estamos uniendo ambas piezas en tiempo de ejecución. Así podemos combinar 100 formas con 100 colores sin escribir 10,000 clases combinadas, solo necesitamos 200.</li>
               </ul>
             </>
           }
@@ -304,32 +304,32 @@ function BridgePattern() {
           <>
             <b>Cuándo SÍ:</b>
             <ul style={{ paddingLeft: '1.2rem', marginBottom: '1rem', listStyleType: 'disc' }}>
-              <li>Cuando tienes dos dimensiones de variación (ej. formas y colores).</li>
-              <li>Cuando quieres evitar la explosión de subclases combinadas.</li>
-              <li>Cuando necesitas cambiar la implementación en tiempo de ejecución.</li>
+              <li>Cuando tenemos dos dimensiones de variación que crecen por separado (por ejemplo, formas y colores).</li>
+              <li>Cuando queremos evitar que las subclases se multipliquen con cada combinación nueva.</li>
+              <li>Cuando necesitamos poder cambiar la implementación en tiempo de ejecución.</li>
             </ul>
             <b>Cuándo NO:</b>
             <ul style={{ paddingLeft: '1.2rem', listStyleType: 'disc' }}>
-              <li>Si solo hay una dimensión de variación (ej. solo formas).</li>
-              <li>Si la jerarquía es pequeña y estable.</li>
-              <li>Si la abstracción y la implementación están fuertemente acopladas y no se prevé cambio.</li>
+              <li>Si solo existe una dimensión de variación (por ejemplo, solo formas).</li>
+              <li>Si la jerarquía es pequeña y no va a cambiar.</li>
+              <li>Si la abstracción y la implementación están tan acopladas que separarlas no aporta nada.</li>
             </ul>
           </>
         }
       />
-      
-      <PatternCard 
+
+      <PatternCard
         id="real-example"
         type="info"
         title="Ejemplo real"
         description={
           <>
-            En <b>Laravel</b>, el sistema de Log usa el patrón Bridge:
+            En <b>Laravel</b>, el sistema de Log es un buen ejemplo del patrón Bridge en acción:
             <ul style={{ paddingLeft: '1.2rem', marginTop: '0.5rem', marginBottom: '0.5rem', listStyleType: 'disc' }}>
-              <li>La abstracción es el <b>Logger</b> (interfaz común).</li>
-              <li>La implementación son los distintos drivers (<b>Monolog</b>, <b>StackDriver</b>, etc.).</li>
+              <li>La abstracción es el <b>Logger</b>, la interfaz común que usa el resto de la aplicación.</li>
+              <li>La implementación son los distintos drivers disponibles, como <b>Monolog</b> o <b>StackDriver</b>.</li>
             </ul>
-            Esto permite cambiar el backend de logging sin modificar el código que usa el logger en la aplicación.
+            Gracias a esta separación, se puede cambiar el backend de logging sin tocar ni una línea del código que ya usa el logger.
           </>
         }
       />
