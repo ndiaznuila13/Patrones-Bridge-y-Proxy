@@ -344,7 +344,12 @@ function ProxyPattern() {
         id="problem"
         type="problem"
         title="El problema"
-        description="Tienes un objeto masivo que consume recursos significativos del sistema (por ejemplo, una imagen pesada en 4K o un modelo 3D grande). Lo necesitas ocasionalmente, pero instanciarlo por adelantado degrada el tiempo de inicio de la aplicación o el uso de memoria."
+        description={
+          <>
+            Imagina que tienes un objeto muy pesado de crear: una imagen en 4K, un modelo 3D, una conexión a una base de datos. Solo lo usas de vez en cuando, pero si lo creas al arrancar la aplicación, pagas todo su costo desde el inicio: la app tarda más en abrir y la memoria queda ocupada por algo que quizá nunca se use.<br/><br/>
+            <b>El dolor:</b> pagar por adelantado el costo de un objeto caro que tal vez ni siquiera vas a necesitar.
+          </>
+        }
       />
       <PatternCard 
         id="solution"
