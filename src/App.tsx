@@ -412,12 +412,12 @@ function ProxyPattern() {
         title="Ejemplo real"
         description={
           <>
-            En las aplicaciones web modernas como <b>React</b> o <b>Vue</b>, un buen ejemplo es el uso de Proxy en la arquitectura del framework:
+            Probablemente ya usaste este patrón sin saberlo: el sistema de reactividad de <b>Vue 3</b> está construido encima del objeto nativo <code>Proxy</code> de JavaScript.
             <ul style={{ paddingLeft: '1.2rem', marginTop: '0.5rem', marginBottom: '0.5rem', listStyleType: 'disc' }}>
-              <li><b>Vue 3</b> utiliza el objeto nativo <code>Proxy</code> de JavaScript para interceptar las lecturas y escrituras a las variables de estado.</li>
-              <li>Esto permite que el framework "se entere" de que una variable cambió y automáticamente dispare la actualización de la interfaz visual sin que el desarrollador tenga que llamar a funciones de actualización.</li>
+              <li>Cuando declaras un estado, Vue no te entrega tu objeto tal cual: te entrega un Proxy que lo envuelve e intercepta cada lectura y cada escritura.</li>
+              <li>Gracias a esa intercepción, el framework "se entera" solo de que algo cambió y actualiza la interfaz al instante, sin que tengas que llamar a ninguna función de refresco.</li>
             </ul>
-            Otro ejemplo común en el mundo real es una <b>tarjeta de crédito</b>, que funciona como un Proxy (un sustituto temporal y seguro) para tu cuenta bancaria real.
+            Y si quieres un ejemplo sin una línea de código: una <b>tarjeta de crédito</b> es un Proxy de tu cuenta bancaria. Para el comercio, pagar con la tarjeta o con efectivo da igual (misma "interfaz"), pero por dentro la tarjeta controla el acceso al dinero real: PIN, límites y registro de cada movimiento.
           </>
         }
       />
