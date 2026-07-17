@@ -392,15 +392,15 @@ function ProxyPattern() {
           <>
             <b>Cuándo SÍ:</b>
             <ul style={{ paddingLeft: '1.2rem', marginBottom: '1rem', listStyleType: 'disc' }}>
-              <li>Cuando necesitas inicialización perezosa (Virtual Proxy) para ahorrar recursos.</li>
-              <li>Cuando necesitas controlar el acceso a un objeto (Protection Proxy).</li>
-              <li>Cuando necesitas ejecutar código extra (como logging o caching) antes o después de acceder al objeto original sin modificarlo.</li>
+              <li>Cuando crear el objeto es caro y no siempre se usa: el Proxy lo crea solo si de verdad hace falta. A esta variante se le llama <i>Virtual Proxy</i>.</li>
+              <li>Cuando no cualquiera debería tocar el objeto: el Proxy revisa quién llama antes de dejar pasar la petición. Esa variante es el <i>Protection Proxy</i>.</li>
+              <li>Cuando quieres meter código extra —registrar accesos, guardar resultados en caché— antes o después de cada llamada, sin ensuciar el objeto original.</li>
             </ul>
             <b>Cuándo NO:</b>
             <ul style={{ paddingLeft: '1.2rem', listStyleType: 'disc' }}>
-              <li>Cuando el objeto original es muy ligero y de inicialización instantánea.</li>
-              <li>Si los clientes de tu código no sufren problemas de latencia o memoria por la creación del objeto original.</li>
-              <li>Cuando la capa de indirección extra añade una complejidad innecesaria a un problema simple.</li>
+              <li>Si el objeto es liviano y se crea al instante, no hay costo que ahorrar: el Proxy sobra.</li>
+              <li>Si a nadie le duele ni la espera ni la memoria, estás resolviendo un problema que no existe.</li>
+              <li>Si tu problema es simple, agregar un intermediario solo lo complica: es una pieza más que escribir, mantener y depurar.</li>
             </ul>
           </>
         }
