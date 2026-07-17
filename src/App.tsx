@@ -366,11 +366,11 @@ function ProxyPattern() {
           title="Anatomía del Código"
           description={
             <>
-              El código de implementación del Proxy se apoya en los siguientes pilares:
+              El ejemplo se arma con tres piezas, y cada una tiene su porqué:
               <ul style={{ paddingLeft: '1.2rem', marginTop: '0.5rem', listStyleType: 'disc' }}>
-                <li><b>La Interfaz (ImageDisplay):</b> Esencial para "engañar" al sistema: tanto el Proxy como el Objeto Real deben compartir la misma interfaz para ser intercambiables sin que el cliente se entere.</li>
-                <li><b>El Sujeto Real (HighResImage):</b> Contiene la lógica original, que suele ser muy pesada o costosa de inicializar en memoria o red.</li>
-                <li><b>El Proxy (ImageProxy):</b> Envuelve al sujeto real y retrasa su creación (Lazy Loading) hasta el último momento posible (cuando verdaderamente se necesita llamar a <code>display()</code>). Es esencial para optimizar recursos y controlar los accesos sin modificar el código del cliente.</li>
+                <li><b>La interfaz <code>ImageDisplay</code> es el disfraz:</b> como el Proxy y el objeto real la comparten, el cliente puede usar cualquiera de los dos sin enterarse de cuál le tocó. Sin ella no serían intercambiables y el truco no funciona.</li>
+                <li><b><code>HighResImage</code> es el objeto pesado de verdad.</b> Todo su costo vive en el constructor (aquí simula leer una imagen 4K del disco), y justo ese costo es el que no queremos pagar antes de tiempo.</li>
+                <li><b><code>ImageProxy</code> es el portero.</b> Arranca con la referencia en <code>null</code> —o sea, sin gastar nada— y recién crea la <code>HighResImage</code> la primera vez que alguien llama a <code>display()</code>. De paso registra cada acceso en el log: código extra que no obligó a tocar ni al cliente ni al objeto real.</li>
               </ul>
             </>
           }
