@@ -333,6 +333,22 @@ function BridgePattern() {
           </>
         }
       />
+
+      <PatternCard
+        id="video"
+        type="info"
+        title="Video Explicativo"
+        description={
+          <iframe
+            width="100%"
+            style={{ aspectRatio: '16/9', border: 'none', borderRadius: '8px' }}
+            src="https://www.youtube.com/embed/CFj74TaG_Xg"
+            title="Video explicativo del patrón Bridge"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        }
+      />
     </div>
   );
 }
@@ -419,6 +435,22 @@ function ProxyPattern() {
             </ul>
             Y si quieres un ejemplo sin una línea de código: una <b>tarjeta de crédito</b> es un Proxy de tu cuenta bancaria. Para el comercio, pagar con la tarjeta o con efectivo da igual (misma "interfaz"), pero por dentro la tarjeta controla el acceso al dinero real: PIN, límites y registro de cada movimiento.
           </>
+        }
+      />
+
+      <PatternCard
+        id="video"
+        type="info"
+        title="Video Explicativo"
+        description={
+          <iframe
+            width="100%"
+            style={{ aspectRatio: '16/9', border: 'none', borderRadius: '8px' }}
+            src="https://www.youtube.com/embed/mwdu-v5CrFs"
+            title="Video explicativo del patrón Proxy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         }
       />
     </div>

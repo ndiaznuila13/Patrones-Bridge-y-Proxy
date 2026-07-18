@@ -27,6 +27,10 @@ export function Sidebar() {
           <span className="material-symbols-outlined">business_center</span>
           Ejemplo Real
         </a>
+        <a href="#video" className="sidebar-link">
+          <span className="material-symbols-outlined">play_circle</span>
+          Video Explicativo
+        </a>
       </nav>
     </aside>
   );
