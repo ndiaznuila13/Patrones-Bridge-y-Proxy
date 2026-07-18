@@ -445,16 +445,28 @@ function Home() {
                 <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> Creación de la pagina web y explicación de ambos patrones</div>
               </li>
               <li style={{ marginBottom: '1.5rem' }}>
-                <b style={{ fontSize: '1.1rem', color: 'var(--accent-cyan)' }}>[Nombre del Integrante 2]</b> — <span style={{ color: 'var(--text-secondary)' }}>Carnet: [000000]</span>
-                <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> [Describe aquí lo que hizo esta persona en el trabajo]</div>
+                <b style={{ fontSize: '1.1rem', color: 'var(--accent-cyan)' }}>Rolando Antonio Zelaya Bulnes</b> — <span style={{ color: 'var(--text-secondary)' }}>Carnet: [20235007]</span>
+                <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> Auditoría de rúbrica, corrección ortográfica, control de calidad e integración de medios</div>
               </li>
               <li style={{ marginBottom: '1.5rem' }}>
-                <b style={{ fontSize: '1.1rem', color: 'var(--accent-cyan)' }}>[Nombre del Integrante 3]</b> — <span style={{ color: 'var(--text-secondary)' }}>Carnet: [000000]</span>
-                <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> [Describe aquí lo que hizo esta persona en el trabajo]</div>
+                <b style={{ fontSize: '1.1rem', color: 'var(--accent-cyan)' }}>Juan Andrés Juárez Gómez</b> — <span style={{ color: 'var(--text-secondary)' }}>Carnet: [20235076]</span>
+                <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> Grabación, análisis y explicación de los patrones con sus videos</div>
+              </li>
+              <li style={{ marginBottom: '1.5rem' }}>
+                <b style={{ fontSize: '1.1rem', color: 'var(--accent-cyan)' }}>Helder Ariel Alfaro Álvarez</b> — <span style={{ color: 'var(--text-secondary)' }}>Carnet: [20235058]</span>
+                <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> Creación de la explicación de los videos</div>
+              </li>
+              <li style={{ marginBottom: '1.5rem' }}>
+                <b style={{ fontSize: '1.1rem', color: 'var(--accent-cyan)' }}>Marco Fabrizio Mazzini Araujo</b> — <span style={{ color: 'var(--text-secondary)' }}>Carnet: [20235740]</span>
+                <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> Diseño y renderizado de los diagramas de clases estructurales para Bridge y Proxy</div>
+              </li>
+              <li style={{ marginBottom: '1.5rem' }}>
+                <b style={{ fontSize: '1.1rem', color: 'var(--accent-cyan)' }}>Kevin Giovanni Landos Castaneda</b> — <span style={{ color: 'var(--text-secondary)' }}>Carnet: [20245109]</span>
+                <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> Humanización del texto de Proxy, documentación del caso real y desarrollo de su código mínimo</div>
               </li>
               <li style={{ marginBottom: '0.5rem' }}>
-                <b style={{ fontSize: '1.1rem', color: 'var(--accent-cyan)' }}>[Nombre del Integrante 4]</b> — <span style={{ color: 'var(--text-secondary)' }}>Carnet: [000000]</span>
-                <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> [Describe aquí lo que hizo esta persona en el trabajo]</div>
+                <b style={{ fontSize: '1.1rem', color: 'var(--accent-cyan)' }}>Marco Andrés Gutiérrez Ramos</b> — <span style={{ color: 'var(--text-secondary)' }}>Carnet: [20245291]</span>
+                <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> Humanización del texto de Bridge, documentación del caso real y desarrollo de su código mínimo</div>
               </li>
             </ul>
           }
