@@ -493,12 +493,12 @@ function Home() {
                 <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> Diseño y renderizado de los diagramas de clases estructurales para Bridge y Proxy</div>
               </li>
               <li style={{ marginBottom: '1.5rem' }}>
-                <b style={{ fontSize: '1.1rem', color: 'var(--accent-cyan)' }}>Kevin Giovanni Landos Castaneda</b> — <span style={{ color: 'var(--text-secondary)' }}>Carnet: [20245109]</span>
-                <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> Humanización del texto de Proxy, documentación del caso real y desarrollo de su código mínimo</div>
+                <b style={{ fontSize: '1.1rem', color: 'var(--accent-cyan)' }}>Kevin Giovanni Landos Castaneda</b> — <span style={{ color: 'var(--text-secondary)' }}>Carnet: 20245301</span>
+                <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> Redacción y estilo del texto de Proxy, documentación del caso real y revisión de su código mínimo</div>
               </li>
               <li style={{ marginBottom: '0.5rem' }}>
                 <b style={{ fontSize: '1.1rem', color: 'var(--accent-cyan)' }}>Marco Andrés Gutiérrez Ramos</b> — <span style={{ color: 'var(--text-secondary)' }}>Carnet: [20245291]</span>
-                <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> Humanización del texto de Bridge, documentación del caso real y desarrollo de su código mínimo</div>
+                <div style={{ marginTop: '0.25rem' }}><b>Aporte:</b> Redacción y estilo del texto de Bridge, documentación del caso real y desarrollo de su código mínimo</div>
               </li>
             </ul>
           }
